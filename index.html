@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="style.css" />
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Game of life</title>
+	</head>
+	<body style="--cursor: default">
+		<canvas class="field" id="field" style="--s: 20px"></canvas>
+		<div class="foother">
+			<div class="play">
+				<button id="play">Play</button>
+				<div id="gen">Generation: 0</div>
+			</div>
+			<div class="menu">
+				<button id="step">Step</button>
+				<button id="cleare">Clear</button>
+			</div>
+			<div class="options">
+				<div class="skale">
+					<button id="scaleminus">-</button>
+					<p id="skale">Scale: 100%</p>
+					<button id="scaleplus">+</button>
+				</div>
+				<div class="speed">
+					<button id="speedminus">-</button>
+					<p id="speed">Speed: 1</p>
+					<button id="speedplus">+</button>
+				</div>
+			</div>
+		</div>
+		<div class="rules" id="rules" data-place="true">
+			<div class="rules-info">
+				<p>
+					- Each cell with <input id="diesmin" type="number" /> or less neighbors gonna die by loneliness. <br />- Each
+					cell with <input id="diesmax" type="number" /> or more neighbors dies too but this time by overpopulation.
+					<br />- If around cell <input id="born" type="number" /> live neighbours this cell will gonna alive.
+				</p>
+				<p class="reset" id="reset" data-reset="true">Reset to default</p>
+			</div>
+			<img data-place="true" src="https://www.svgrepo.com/show/125019/close.svg" alt="" />
+		</div>
+		<button class="rules-button" id="rulesbutton">Rules</button>
+		<div class="random-value" id="rv">Create <br /><b id="random-text">1000</b><br />random cells</div>
+		<input class="input-random" id="ri" type="range" min="500" max="1500" step="50" />
+		<button class="create" id="create">Create</button>
+		<script src="script.js"></script>
+	</body>
+</html>

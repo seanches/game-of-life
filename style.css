@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Press Start 2P';
+	user-select: none;
+}
+
+body {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100vh;
+	background: linear-gradient(45deg, #3d6783, #3a6073);
+}
+
+.field {
+	width: 75vmax;
+	height: 75vmin;
+	background: linear-gradient(rgba(240, 242, 240, 0.2), transparent 1px),
+		linear-gradient(90deg, rgba(240, 242, 240, 0), #232526 1px);
+	background-size: var(--s) var(--s);
+	background-position: var(--x) var(--y);
+	filter: drop-shadow(1vmin -1vmin 1vmin rgba(255, 255, 255, 0.3));
+	cursor: var(--cursor);
+}
+
+.foother {
+	width: 75vmax;
+	height: 12vmin;
+	padding-top: 1vmin;
+	display: grid;
+	grid-template-columns: 3fr 1fr 2fr;
+	justify-items: center;
+	align-items: center;
+}
+
+.play {
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	column-gap: 0;
+	justify-items: center;
+	align-items: center;
+	font-size: 2.5vmin;
+	color: #bbd2c5;
+}
+
+.menu {
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-items: center;
+	align-items: center;
+}
+
+.options {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	column-gap: 100px;
+	font-size: 1vmax;
+	color: #bbd2c5;
+}
+
+.skale {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	margin-bottom: 1vmin;
+	justify-items: center;
+	align-items: center;
+}
+
+.speed {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	justify-items: center;
+	align-items: center;
+}
+
+button {
+	width: 5vmax;
+	height: 6vmin;
+	border: none;
+	background: linear-gradient(45deg, #3d3d6d, #859398);
+	cursor: pointer;
+	font-size: 0.85vmax;
+	border-radius: 0.75vmax;
+	transition: 1s;
+}
+
+.speed button,
+.skale button {
+	font-size: 2vmax;
+}
+
+button:hover {
+	transform: scale(1.05);
+	filter: drop-shadow(5px 5px 4px white);
+}
+
+button:active {
+	transform: none;
+	filter: none;
+	transition: 0.2s;
+}
+
+#play {
+	width: 12vmax;
+	height: 10vmin;
+	font-size: 2.2vmax;
+}
+
+.rules {
+	display: none;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	background: rgba(0, 0, 0, 0.9);
+	z-index: 2;
+}
+
+.rules-info {
+	width: 50%;
+	height: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	line-height: 7vmin;
+	font-size: 3vmin;
+	color: azure;
+}
+
+.reset {
+	margin-top: 2vmin;
+	color: darkkhaki;
+	transition: 1s;
+}
+
+.reset:hover {
+	cursor: pointer;
+	letter-spacing: 0.5vmax;
+}
+
+.rules-info input {
+	position: relative;
+	width: 2.75vmax;
+	height: 5vmin;
+	background: transparent;
+	font-size: 3vmin;
+	text-align: center;
+	color: azure;
+	border: none;
+	border-bottom: 1vmin solid azure;
+}
+
+.rules-info input:hover {
+	cursor: default;
+}
+
+.rules-info input:focus {
+	outline: none;
+	caret-color: transparent;
+	user-select: none;
+}
+
+.rules-button {
+	position: absolute;
+	top: 10vmin;
+	left: calc(6.25vmax - 2.5vmax);
+}
+
+.rules img {
+	position: absolute;
+	top: 10vmin;
+	right: 25vmax;
+	width: 7vmin;
+	height: 7vmin;
+	filter: invert(1);
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.rules img:hover {
+	transform: scale(1.05);
+}
+
+.input-random {
+	position: absolute;
+	top: 60vmin;
+	left: 3.5vmax;
+	cursor: pointer;
+	width: 5vmax;
+	transform: scale(1.5);
+}
+
+.random-value {
+	position: absolute;
+	top: 47vmin;
+	left: 0.5vmax;
+	width: 12vmax;
+	text-align: center;
+	color: #bbd2c5;
+	font-size: 2vmin;
+	line-height: 4vmin;
+}
+.random-value b {
+ font-size: 3vmin;
+}
+
+.create {
+	position: absolute;
+	top: 63vmin;
+	left: 2.5vmax;
+	width: 7vmax;
+	font-size: 2vmin;
+ }
